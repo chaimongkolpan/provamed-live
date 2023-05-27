@@ -310,7 +310,7 @@
             <div id="container-prepare" class="container-prepare">
                 <h1 style="font-size: 80px;">Import File</h1><br />
                 <input class="form-control" id="customer-file" type="file" style="font-size: 40px;width: 600px;opacity: 80%;"/>
-                <p style="color: red;font-size: 15px;">( Please press F11 to view optimal size )</p>
+                <!-- <p style="color: red;font-size: 15px;">( Please press F11 to view optimal size )</p> -->
                 <button id="start-btn" class="btn start-btn">START</button>
             </div>
             <div id="container-1" class="container-3" style="display: none;">
@@ -687,7 +687,7 @@
                     }, 500);
                 }
                 $("#start-btn").click(function() {
-                    if(((window.fullScreen) || (window.innerWidth == screen.width && window.innerHeight == screen.height)) && $('#customer-file')[0].files.length > 0) {
+                    if(/*((window.fullScreen) || (window.innerWidth == screen.width && window.innerHeight == screen.height)) && */$('#customer-file')[0].files.length > 0) {
                         readFile();
                         $('#container-prepare').hide();
                         $('#container-1').show();
@@ -695,7 +695,7 @@
                         $('#container-5').hide();
                         $('#container-summary').hide();
                     } else {
-                        alert('Please Press F11 to fullscreen before use and upload file.');
+                        alert('Please upload file.');
                     }
                 });
                 $("#random-1-btn").click(function() {
