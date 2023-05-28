@@ -908,16 +908,16 @@
                     }, 500);
                 }
                 $("#start-btn").click(function() {
-                    //if(/*((window.fullScreen) || (window.innerWidth == screen.width && window.innerHeight == screen.height)) && */$('#customer-file')[0].files.length > 0) {
+                    if(/*((window.fullScreen) || (window.innerWidth == screen.width && window.innerHeight == screen.height)) && */$('#customer-file')[0].files.length > 0) {
                         readFile();
                         $('#container-prepare').hide();
                         $('#container-1').show();
                         $('#container-3').hide();
                         $('#container-5').hide();
                         $('#container-summary').hide();
-                    //} else {
-                        //alert('Please upload file.');
-                    //}
+                    } else {
+                        alert('Please upload file.');
+                    }
                 });
                 $("#random-1-btn").click(function() {
                     changeRandomBtn1('#random-1-btn', random1);
