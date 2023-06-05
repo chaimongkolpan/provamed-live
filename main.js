@@ -267,11 +267,12 @@ $(document).ready(function() {
         },counttime5 * 100 + 100);
     }
     $("#export").click(function() {
+        var workbook = XLSX.utils.book_new();
         // let data1 = [["เลขที่นั่ง","รายชื่อ"]]
         // for(let i in lucky1) {
         //     data1.push([customers[lucky1[i]]['No'], customers[lucky1[i]]['Firstname'] + ' ' + customers[lucky1[i]]['Lastname']]);
         // }
-        // var workbook = XLSX.utils.book_new(), worksheet1 = XLSX.utils.aoa_to_sheet(data1);
+        // var worksheet1 = XLSX.utils.aoa_to_sheet(data1);
         // workbook.SheetNames.push("ผู้โชคดี1");
         // workbook.Sheets["ผู้โชคดี1"] = worksheet1;
 
