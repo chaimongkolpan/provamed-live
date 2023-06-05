@@ -35,7 +35,7 @@ $(document).ready(function() {
                     if (workbook.SheetNames.length == 1) {
                         var XL_row_object = XLSX.utils.sheet_to_row_object_array(workbook.Sheets[sheetName]);
                         console.log(XL_row_object);
-                        for (let i = 0;i < XL_row_object.length;i++) master_data.push(i)
+                        for (let i = 0;i < XL_row_object.length;i++) if (XL_row_object['No'].length > 0) master_data.push(i)
                         customers = XL_row_object;
                     }
                 }
