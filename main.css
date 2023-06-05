@@ -240,7 +240,7 @@ h2 {
     justify-content: flex-start;
     padding: 10px 40px;
     overflow-y: auto;
-    max-width: fit-content;
+    max-width: 1500px;
 }
 .summary-container::-webkit-scrollbar {
     width: 8px; /* Adjust the width as needed */
