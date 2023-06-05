@@ -26,10 +26,19 @@ $(document).ready(function() {
                 type: 'array'
             });
             workbook.SheetNames.forEach(function(sheetName) {
-                var XL_row_object = XLSX.utils.sheet_to_row_object_array(workbook.Sheets[sheetName]);
-                console.log(XL_row_object);
-                for (let i = 0;i < XL_row_object.length;i++) master_data.push(i)
-                customers = XL_row_object;
+                if (sheetName == 'ImportName') {
+                    var XL_row_object = XLSX.utils.sheet_to_row_object_array(workbook.Sheets[sheetName]);
+                    console.log(XL_row_object);
+                    for (let i = 0;i < XL_row_object.length;i++) master_data.push(i)
+                    customers = XL_row_object;
+                } else {
+                    if (workbook.SheetNames.length == 1) {
+                        var XL_row_object = XLSX.utils.sheet_to_row_object_array(workbook.Sheets[sheetName]);
+                        console.log(XL_row_object);
+                        for (let i = 0;i < XL_row_object.length;i++) master_data.push(i)
+                        customers = XL_row_object;
+                    }
+                }
             });
 
         };
