@@ -410,8 +410,8 @@ $(document).ready(function() {
             readFile();
             $('#container-prepare').hide();
             $('#container-1').hide();
-            $('#container-3').show();
-            $('#container-5').hide();
+            $('#container-3').hide();
+            $('#container-5').show();
             $('#container-20').hide();
             $('#container-summary').hide();
         } else {
@@ -430,22 +430,16 @@ $(document).ready(function() {
     $("#random-20-btn").click(function() {
         changeRandomBtn20('#random-20-btn', random20);
     });
-    $("#next-to-3").click(function() {
-        $('#container-1').hide();
-        $('#container-5').hide();
-        $('#container-3').show();
-        $('#container-summary').hide();
-    });
     $("#prev-to-1").click(function() {
         $('#container-1').show();
         $('#container-3').hide();
         $('#container-5').hide();
         $('#container-summary').hide();
     });
-    $("#next-to-5").click(function() {
+    $("#next-to-3").click(function() {
         $('#container-1').hide();
-        $('#container-3').hide();
-        $('#container-5').show();
+        $('#container-5').hide();
+        $('#container-3').show();
         $('#container-20').hide();
         $('#container-summary').hide();
     });
@@ -456,7 +450,28 @@ $(document).ready(function() {
         $('#container-20').hide();
         $('#container-summary').hide();
     });
+    $("#next-to-5").click(function() {
+        $('#container-1').hide();
+        $('#container-3').hide();
+        $('#container-5').show();
+        $('#container-20').hide();
+        $('#container-summary').hide();
+    });
+    $("#prev-to-5").click(function() {
+        $('#container-1').hide();
+        $('#container-3').hide();
+        $('#container-5').show();
+        $('#container-20').hide();
+        $('#container-summary').hide();
+    });
     $("#next-to-20").click(function() {
+        $('#container-1').hide();
+        $('#container-3').hide();
+        $('#container-5').hide();
+        $('#container-20').show();
+        $('#container-summary').hide();
+    });
+    $("#prev-to-20").click(function() {
         $('#container-1').hide();
         $('#container-3').hide();
         $('#container-5').hide();
@@ -495,19 +510,5 @@ $(document).ready(function() {
             if (parseInt(i) >= 10) id = '#summary-20-right';
             $(id).append(gen_p_tag(parseInt(i) + 1, name, customers[lucky20[i]]['No']));
         }
-    });
-    $("#prev-to-5").click(function() {
-        $('#container-1').hide();
-        $('#container-3').hide();
-        $('#container-5').show();
-        $('#container-20').hide();
-        $('#container-summary').hide();
-    });
-    $("#prev-to-20").click(function() {
-        $('#container-1').hide();
-        $('#container-3').hide();
-        $('#container-5').hide();
-        $('#container-20').show();
-        $('#container-summary').hide();
     });
 });
